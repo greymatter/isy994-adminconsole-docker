@@ -21,7 +21,7 @@ if [ ! -f app/admin.jnlp ]; then
 
     wget -O admin.jnlp http://${ISY994_HOST}/admin.jnlp
 
-    if [ ! -f app/admin.jnlp ]; then
+    if [ ! $? -eq 0 ]; then
         echo "${RED}Failed to download admin.jnlp, please check your settings${NC}"
         sleep 2
         exit 2
