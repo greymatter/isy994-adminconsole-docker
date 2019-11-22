@@ -19,7 +19,7 @@ cd /app
 if [ ! -f lib/admin.jnlp ]; then
     echo "Downloading admin.jnlp"
 
-    wget -O admin.jnlp https://${ISY994_HOST}/admin.jnlp --no-check-certificate
+    wget -O admin.jnlp http://${ISY994_HOST}/admin.jnlp
 
     if [ ! $? -eq 0 ]; then
         echo "${RED}Failed to download admin.jnlp, please check your settings${NC}"
