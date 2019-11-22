@@ -15,7 +15,7 @@ deb http://security.debian.org/debian-security stretch/updates main\n' \
     && mkdir -p /usr/share/man/man1 \
     && apt-get -y --no-install-recommends install \
         icedtea-netx/stretch openjdk-8-jre/stretch java-common/stretch \
-        fonts-dejavu-extra yad \
+        fonts-dejavu-extra yad wget \
     && apt-mark hold icedtea-netx openjdk-8-jre java-common \
     && rm /etc/apt/sources.list.d/stretch.list \
     && rm -rf /var/lib/apt/lists/*
