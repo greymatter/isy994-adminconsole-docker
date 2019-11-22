@@ -16,12 +16,12 @@ echo "Environment ok"
 
 cd /app
 
-if [ ! -f lib/admin.jnlp ]; then
+if [ ! -f app/admin.jnlp ]; then
     echo "Downloading admin.jnlp"
 
     wget -O admin.jnlp http://${ISY994_HOST}/admin.jnlp
 
-    if [ ! $? -eq 0 ]; then
+    if [ ! -f app/admin.jnlp ]; then
         echo "${RED}Failed to download admin.jnlp, please check your settings${NC}"
         sleep 2
         exit 2
