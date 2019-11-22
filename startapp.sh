@@ -12,18 +12,6 @@ if [ -z "${ISY994_HOST}" ]; then
     exit 1
 fi
 
-if [ -z "${ISY994_USER}" ]; then
-    echo "${RED}Please set a proper isy994 user with ISY994_USER${NC}"
-    sleep 2
-    exit 1
-fi
-
-if [ -z "${ISY994_PASSWORD}" ]; then
-    echo "${RED}Please set a proper isy994 password with ISY994_PASSWORD${NC}"
-    sleep 2
-    exit 1
-fi
-
 echo "Environment ok"
 
 cd /app
@@ -41,11 +29,5 @@ if [ ! -f lib/admin.jnlp ]; then
 fi
 
 echo "${GREEN}Initialization complete, starting virtual console${NC}"
-
-if [ -n "$IDRAC_KEYCODE_HACK" ]; then
-    echo "Enabling keycode hack"
-
-    export LD_PRELOAD=/keycode-hack.so
-fi
 
 exec javaws /app/admin.jnlp
