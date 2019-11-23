@@ -14,3 +14,4 @@ ISY_HOST : IP address of ISY994
 
 #### Based on the project 
 https://github.com/jlesage/docker-baseimage-gui
+https://git.bernhard-ehlers.de/ehlers/gns3-docker-images/src/branch/master/ipterm/java/Dockerfile
