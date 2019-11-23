@@ -23,6 +23,8 @@ deb http://security.debian.org/debian-security stretch/updates main\n' \
 RUN mkdir /app && \
     chown ${USER_ID}:${GROUP_ID} /app
 
+EXPOSE 5800 5900
+
 COPY startapp.sh /startapp.sh
 
 WORKDIR /app
