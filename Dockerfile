@@ -21,7 +21,9 @@ deb http://security.debian.org/debian-security stretch/updates main\n' \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir /app && \
-    chown ${USER_ID}:${GROUP_ID} /app
+    chown ${USER_ID}:${GROUP_ID} /app 
+
+RUN itweb-settings -set deployment.manifest.attributes.check NONE
 
 EXPOSE 5800 5900
 
