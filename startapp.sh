@@ -29,5 +29,6 @@ if [ ! -f app/admin.jnlp ]; then
 fi
 
 echo "${GREEN}Initialization complete, starting virtual console${NC}"
+itweb-settings -set deployment.manifest.attributes.check NONE
 
 exec javaws /app/admin.jnlp
